@@ -20,7 +20,7 @@ namespace ServerApp {
     //Server Class
     public class Server {
         public static void Main() {
-            HttpChannel channel = new HttpChannel(8001); //Create a new channel
+
             ChannelServices.RegisterChannel(channel); //Register channel
             RemotingConfiguration.RegisterWellKnownServiceType(typeof(Service), "Service", WellKnownObjectMode.Singleton);
             Console.WriteLine("Server ON at port number: 8001");
